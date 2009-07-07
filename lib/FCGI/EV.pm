@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.4');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.5');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -212,12 +212,12 @@ __END__
 
 =head1 NAME
 
-FCGI::EV - [One line description of module's purpose here]
+FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 
 =head1 VERSION
 
-This document describes FCGI::EV version 1.0.3
+This document describes FCGI::EV version 1.0.5
 
 
 =head1 SYNOPSIS

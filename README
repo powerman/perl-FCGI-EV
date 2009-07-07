@@ -1,4 +1,4 @@
-FCGI-EV version 1.0.4
+FCGI-EV version 1.0.5
 
 This module implement FastCGI protocol for use in EV-based applications.
 (That mean you have to run EV::loop in your application or this module

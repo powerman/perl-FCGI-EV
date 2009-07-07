@@ -1,5 +1,5 @@
 ---
-abstract: '[One line description of module''s purpose here]'
+abstract: 'Implement FastCGI protocol for use in EV-based applications'
 author:
   - 'Alex Efros <powerman-asdf@ya.ru>'
 build_requires:
@@ -20,4 +20,4 @@ requires:
   IO::Stream: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.000004
+version: 1.000005
