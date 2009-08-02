@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.5');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.6');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -187,6 +187,7 @@ sub _unpack_nv {
 
 sub _pack_pkt {
     my ($type, $req_id, $content) = @_;
+    $content = pack 'a*', $content; # convert from Unicode to UTF-8, if any
     my $pkt = q{};
     while (1) {
         my $c = substr $content, 0, MAX_CONTENT_LEN, q{};

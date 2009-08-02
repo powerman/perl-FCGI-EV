@@ -20,4 +20,4 @@ requires:
   IO::Stream: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.000005
+version: 1.000006
