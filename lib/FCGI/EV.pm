@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.6');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.7');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -218,7 +218,7 @@ FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 =head1 VERSION
 
-This document describes FCGI::EV version 1.0.5
+This document describes FCGI::EV version 1.0.7
 
 
 =head1 SYNOPSIS
@@ -246,12 +246,15 @@ This document describes FCGI::EV version 1.0.5
  my $path = '/tmp/fastcgi.sock';
 
  socket my $srvsock, AF_UNIX, SOCK_STREAM, 0;
+ unlink $path;
+ my $umask = umask 0;   # ensure 0777 perms for unix socket
  bind $srvsock, sockaddr_un($path);
+ umask $umask;
  listen $srvsock, SOMAXCONN;
  fcntl $srvsock, F_SETFL, O_NONBLOCK;
 
- my $w = EV::io $srv_sock, EV::READ, sub {
-    accept my $sock, $srv_sock;
+ my $w = EV::io $srvsock, EV::READ, sub {
+    accept my($sock), $srvsock;
     fcntl $sock, F_SETFL, O_NONBLOCK;
     FCGI::EV->new($sock, 'FCGI::EV::Std');
  };
