@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.7');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.8');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -93,9 +93,9 @@ sub IO {
             my $pkt = substr $io->{in_buf}, 0, $io->{Need_in}, q{};
             $io->{Wait_header}  = 1;
             $io->{Need_in}      = FCGI_HEADER_LEN;
-            my $err = $self->_process($pkt);
-            if ($err) {
-                warn "FCGI::EV: $err\n";
+            my $error = $self->_process($pkt);
+            if ($error) {
+                warn "FCGI::EV: $error\n";
                 return $io->close();
             }
         }
@@ -218,7 +218,7 @@ FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 =head1 VERSION
 
-This document describes FCGI::EV version 1.0.7
+This document describes FCGI::EV version 1.0.8
 
 
 =head1 SYNOPSIS
