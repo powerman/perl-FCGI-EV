@@ -1,5 +1,8 @@
 Revision history for FCGI-EV
 
+1.0.9   Thu Oct  3 16:42:55 EEST 2013
+	Remove MYMETA.*
+
 1.0.8	Sun May 13 06:01:33 EEST 2012
 	Fix requirements.
 

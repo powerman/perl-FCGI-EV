@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.8');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.9');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -218,7 +218,7 @@ FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 =head1 VERSION
 
-This document describes FCGI::EV version 1.0.8
+This document describes FCGI::EV version 1.0.9
 
 
 =head1 SYNOPSIS
