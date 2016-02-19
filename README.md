@@ -7,7 +7,7 @@ FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 # VERSION
 
-This document describes FCGI::EV version v1.0.9
+This document describes FCGI::EV version v2.0.0
 
 # SYNOPSIS
 

@@ -54,7 +54,7 @@
    "provides" : {
       "FCGI::EV" : {
          "file" : "lib/FCGI/EV.pm",
-         "version" : "v1.0.9"
+         "version" : "v2.0.0"
       }
    },
    "release_status" : "stable",
@@ -69,6 +69,6 @@
          "web" : "https://github.com/powerman/perl-FCGI-EV"
       }
    },
-   "version" : "v1.0.9"
+   "version" : "v2.0.0"
 }
 
