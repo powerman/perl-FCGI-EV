@@ -5,7 +5,7 @@ use strict;
 use utf8;
 use Carp;
 
-our $VERSION = 'v2.0.0';
+our $VERSION = 'v2.0.1';
 
 use Scalar::Util qw( weaken );
 use IO::Stream;
@@ -220,7 +220,7 @@ FCGI::EV - Implement FastCGI protocol for use in EV-based applications
 
 =head1 VERSION
 
-This document describes FCGI::EV version v2.0.0
+This document describes FCGI::EV version v2.0.1
 
 
 =head1 SYNOPSIS
